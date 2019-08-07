@@ -46,6 +46,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+// Navbar links
 document.getElementsByTagName("a")[0].textContent =
 	siteContent.nav["nav-item-1"];
 document.getElementsByTagName("a")[1].textContent =
@@ -58,3 +59,11 @@ document.getElementsByTagName("a")[4].textContent =
 	siteContent.nav["nav-item-5"];
 document.getElementsByTagName("a")[5].textContent =
 	siteContent.nav["nav-item-6"];
+
+// cta
+document.getElementsByTagName("h1")[0].textContent = siteContent.cta.h1;
+document.getElementsByTagName("button")[0].textContent = siteContent.cta.button;
+
+document
+	.getElementById("cta-img")
+	.setAttribute("src", siteContent.cta["img-src"]);
