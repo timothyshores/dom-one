@@ -48,17 +48,16 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // Navbar links
 
-let navbarLinks = document.getElementsByTagName("a");
-navbarLinks[0].textContent = siteContent.nav["nav-item-1"];
-navbarLinks[1].textContent = siteContent.nav["nav-item-2"];
-navbarLinks[2].textContent = siteContent.nav["nav-item-3"];
-navbarLinks[3].textContent = siteContent.nav["nav-item-4"];
-navbarLinks[4].textContent = siteContent.nav["nav-item-5"];
-navbarLinks[5].textContent = siteContent.nav["nav-item-6"];
+let navLinks = document.getElementsByTagName("a");
+navLinks[0].textContent = siteContent.nav["nav-item-1"];
+navLinks[1].textContent = siteContent.nav["nav-item-2"];
+navLinks[2].textContent = siteContent.nav["nav-item-3"];
+navLinks[3].textContent = siteContent.nav["nav-item-4"];
+navLinks[4].textContent = siteContent.nav["nav-item-5"];
+navLinks[5].textContent = siteContent.nav["nav-item-6"];
 
 // cta
 let ctaText = document.getElementsByClassName("cta-text")[0];
-
 ctaText.children[0].textContent = siteContent.cta.h1;
 ctaText.children[1].textContent = siteContent.cta.button;
 
@@ -67,37 +66,48 @@ document
 	.setAttribute("src", siteContent.cta["img-src"]);
 
 // main content
+const mainContent = siteContent["main-content"];
+let topContent = document.getElementsByClassName("top-content")[0];
+
 // features
-let features = document.getElementsByClassName("top-content")[0].children[0];
-features.children[0].textContent = siteContent["main-content"]["features-h4"];
-features.children[1].textContent =
-	siteContent["main-content"]["features-content"];
+let features = topContent.children[0];
+features.children[0].textContent = mainContent["features-h4"];
+features.children[1].textContent = mainContent["features-content"];
 
 // about
-let about = document.getElementsByClassName("top-content")[0].children[1];
-about.children[0].textContent = siteContent["main-content"]["about-h4"];
-about.children[1].textContent = siteContent["main-content"]["about-content"];
+let about = topContent.children[1];
+about.children[0].textContent = mainContent["about-h4"];
+about.children[1].textContent = mainContent["about-content"];
 
 // middle image
 let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+middleImg.setAttribute("src", mainContent["middle-img-src"]);
 
 // bottom content
 let bottomContent = document.getElementsByClassName("bottom-content")[0];
 
 // Service
 let services = bottomContent.children[0];
-services.children[0].textContent = siteContent["main-content"]["services-h4"];
-services.children[1].textContent =
-	siteContent["main-content"]["services-content"];
+services.children[0].textContent = mainContent["services-h4"];
+services.children[1].textContent = mainContent["services-content"];
 
 // Product
 let product = bottomContent.children[1];
-product.children[0].textContent = siteContent["main-content"]["product-h4"];
-product.children[1].textContent =
-	siteContent["main-content"]["product-content"];
+product.children[0].textContent = mainContent["product-h4"];
+product.children[1].textContent = mainContent["product-content"];
 
 // Vision
 let vision = bottomContent.children[2];
-vision.children[0].textContent = siteContent["main-content"]["vision-h4"];
-vision.children[1].textContent = siteContent["main-content"]["vision-content"];
+vision.children[0].textContent = mainContent["vision-h4"];
+vision.children[1].textContent = mainContent["vision-content"];
+
+// contact
+let contact = document.getElementsByClassName("contact")[0];
+contact.children[0].textContent = siteContent.contact["contact-h4"];
+contact.children[1].textContent = siteContent.contact.address;
+contact.children[2].textContent = siteContent.contact.phone;
+contact.children[3].textContent = siteContent.contact.email;
+
+// footer
+let footer = document.getElementsByTagName("footer")[0];
+footer.children[0].textContent = siteContent.footer.copyright;
