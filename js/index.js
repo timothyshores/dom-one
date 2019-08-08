@@ -47,23 +47,57 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // Navbar links
-document.getElementsByTagName("a")[0].textContent =
-	siteContent.nav["nav-item-1"];
-document.getElementsByTagName("a")[1].textContent =
-	siteContent.nav["nav-item-2"];
-document.getElementsByTagName("a")[2].textContent =
-	siteContent.nav["nav-item-3"];
-document.getElementsByTagName("a")[3].textContent =
-	siteContent.nav["nav-item-4"];
-document.getElementsByTagName("a")[4].textContent =
-	siteContent.nav["nav-item-5"];
-document.getElementsByTagName("a")[5].textContent =
-	siteContent.nav["nav-item-6"];
+
+let navbarLinks = document.getElementsByTagName("a");
+navbarLinks[0].textContent = siteContent.nav["nav-item-1"];
+navbarLinks[1].textContent = siteContent.nav["nav-item-2"];
+navbarLinks[2].textContent = siteContent.nav["nav-item-3"];
+navbarLinks[3].textContent = siteContent.nav["nav-item-4"];
+navbarLinks[4].textContent = siteContent.nav["nav-item-5"];
+navbarLinks[5].textContent = siteContent.nav["nav-item-6"];
 
 // cta
-document.getElementsByTagName("h1")[0].textContent = siteContent.cta.h1;
-document.getElementsByTagName("button")[0].textContent = siteContent.cta.button;
+let ctaText = document.getElementsByClassName("cta-text")[0];
+
+ctaText.children[0].textContent = siteContent.cta.h1;
+ctaText.children[1].textContent = siteContent.cta.button;
 
 document
 	.getElementById("cta-img")
 	.setAttribute("src", siteContent.cta["img-src"]);
+
+// main content
+// features
+let features = document.getElementsByClassName("top-content")[0].children[0];
+features.children[0].textContent = siteContent["main-content"]["features-h4"];
+features.children[1].textContent =
+	siteContent["main-content"]["features-content"];
+
+// about
+let about = document.getElementsByClassName("top-content")[0].children[1];
+about.children[0].textContent = siteContent["main-content"]["about-h4"];
+about.children[1].textContent = siteContent["main-content"]["about-content"];
+
+// middle image
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+// bottom content
+let bottomContent = document.getElementsByClassName("bottom-content")[0];
+
+// Service
+let services = bottomContent.children[0];
+services.children[0].textContent = siteContent["main-content"]["services-h4"];
+services.children[1].textContent =
+	siteContent["main-content"]["services-content"];
+
+// Product
+let product = bottomContent.children[1];
+product.children[0].textContent = siteContent["main-content"]["product-h4"];
+product.children[1].textContent =
+	siteContent["main-content"]["product-content"];
+
+// Vision
+let vision = bottomContent.children[2];
+vision.children[0].textContent = siteContent["main-content"]["vision-h4"];
+vision.children[1].textContent = siteContent["main-content"]["vision-content"];
