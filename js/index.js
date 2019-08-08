@@ -111,3 +111,18 @@ contact.children[3].textContent = siteContent.contact.email;
 // footer
 let footer = document.getElementsByTagName("footer")[0];
 footer.children[0].textContent = siteContent.footer.copyright;
+
+// Task 3
+let nav = document.getElementsByTagName("nav")[0];
+
+const firstLink = document.createElement("a");
+firstLink.textContent = "prepend()";
+nav.prepend(firstLink);
+
+const lastLink = document.createElement("a");
+lastLink.textContent = "appendChild()";
+nav.appendChild(lastLink);
+
+for (let link of navLinks) {
+	link.style.color = "green";
+}
